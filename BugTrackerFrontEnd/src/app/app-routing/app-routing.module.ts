@@ -6,14 +6,9 @@ import { SearchFormComponent } from '../components/search-form/search-form.compo
 import { RouterModule} from '@angular/router';
 
 const routes: Routes = [
-  {
-    path:'',
-    component: ErrorFormComponent
-  },
-  {
-   path:'search',
-    component:SearchFormComponent
-  }
+  {path:'', pathMatch: "full", redirectTo: 'ErrorForm'},
+  {path:'ErrorForm', component: ErrorFormComponent},
+  {path:'search', component:SearchFormComponent}
 ];
 
 
