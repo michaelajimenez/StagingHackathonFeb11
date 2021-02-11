@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
 import { ErrorFormComponent } from './components/error-form/error-form.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,9 @@ import { SearchFormComponent } from './components/search-form/search-form.compon
     SearchFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

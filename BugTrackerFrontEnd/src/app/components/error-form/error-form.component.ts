@@ -4,13 +4,17 @@ import { Error } from 'src/app/error';
 import { ServiceService } from 'src/app/service.service';
 
 
+
 @Component({
   selector: 'app-error-form',
   templateUrl: './error-form.component.html',
   styleUrls: ['./error-form.component.css']
 })
 export class ErrorFormComponent implements OnInit {
-error: Error = new Error;
+  submitted = false;
+  error: Error = new Error();
+  name:string;
+
   constructor(private httpService: ServiceService, private router: Router ) { }
 
   ngOnInit(): void {
