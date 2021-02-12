@@ -1,7 +1,8 @@
 export class Error {
-    errorId: number;
-    firstName: string;
-    lastName: string;
+    errorID: number;
+    submitterFirstName: string;
+    submitterLastName: string;
     description: string;
     solution: string;
+    userName: string;
 }

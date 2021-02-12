@@ -11,7 +11,8 @@ import { ServiceService } from 'src/app/service.service';
 })
 export class SearchFormComponent implements OnInit {
   //@Input() error : Error[];
-  errors: Observable< Error[]> ;
+  // errors: Observable<Error[]> ;
+errors:Error[] = Array();
 error: Error= new Error();
 name: string ;
 
@@ -23,8 +24,29 @@ this.reloadData();
 
   }
   reloadData(){
-    this.errors=this.serviceService.getErrorList();
+    // this.errors=this.serviceService.getErrorList();
+
+    this.serviceService.getErrorList().subscribe(
+      (response: any) => {
+        console.log(response);
+
+        for(let i in response) {
+          let obj:Error = new Error();
+          obj.errorID = response[i].errorID;
+          obj.userName = response[i].userName;
+          obj.submitterFirstName = response[i].submitterFirstName;
+          obj.submitterLastName = response[i].submitterLastName;
+          obj.description = response[i].description;
+          obj.solution = response[i].solution;
+
+          this.errors.push(obj);
+        }
+        console.log(this.errors);
+      }
+    )
   }
+
+
 
   searchError(): void {
     this.serviceService.getErrorByName(this.name).subscribe( 

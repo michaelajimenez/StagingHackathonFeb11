@@ -8,7 +8,7 @@ import { RouterModule} from '@angular/router';
 const routes: Routes = [
   {path:'', pathMatch: "full", redirectTo: 'ErrorForm'},
   {path:'ErrorForm', component: ErrorFormComponent},
-  {path:'search', component:SearchFormComponent}
+  {path:'ErrorForm/search', component:SearchFormComponent}
 ];
 
 

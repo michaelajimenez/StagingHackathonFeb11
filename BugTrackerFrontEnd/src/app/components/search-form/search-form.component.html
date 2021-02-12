@@ -15,6 +15,8 @@
         <table class="table table-striped">
           <thead>
             <tr>
+               <th>ErrorID</th>
+              <th>UserName</th>
               <th>Firstname</th>
               <th>Lastname</th>
               <th>Description</th>
@@ -22,9 +24,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let error of errors"> 
-              <td>{{error.firstName}}</td>
-              <td>{{error.lastName}}</td>
+            <tr *ngFor="let error of errors">
+                <td>{{error.errorID}}</td> 
+              <td>{{error.userName}}</td>
+              <td>{{error.submitterFirstName}}</td>
+              <td>{{error.submitterLastName}}</td>
               <td>{{error.description}}</td>
               <td>{{error.solution}}</td>
 

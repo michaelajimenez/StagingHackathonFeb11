@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class ServiceService {
-  private baseUrl = 'http://localhost:7679/';
+  private baseUrl = 'http://localhost:7654';
   constructor(private http:HttpClient) { }
 
 
@@ -16,7 +16,7 @@ createError(error:Object):Observable<any>{
   return this.http.post(`${this.baseUrl}/saveErrors`, error);
 }
 getErrorByName(name:string):Observable<any>{
-  return this.http.get(`${this.baseUrl}/search/?name=${name}`);
+  return this.http.get(`${this.baseUrl}/getErrorsByName?un=${name}`);
 }
 getErrorList():Observable<any>{
   return this.http.get(`${this.baseUrl}/getErrors`);
