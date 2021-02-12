@@ -1,40 +1,48 @@
-<h1> Search for Issues</h1>
-<form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-  
-     <input placeholder="Search Errors" type="text" class="form-control" id="name" required [(ngModel)]="name" name="name">
-  </div>
-  <button type="submit" style="float:right" class="btn btn-success">Search</button>
-  </form>
-  
-  <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h2>Errors</h2>
-      </div>
-      <div class="panel-body">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-               <th>ErrorID</th>
-              <th>UserName</th>
-              <th>Firstname</th>
-              <th>Lastname</th>
-              <th>Description</th>
-              <th>Solution</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let error of errors">
-                <td>{{error.errorID}}</td> 
-              <td>{{error.userName}}</td>
-              <td>{{error.submitterFirstName}}</td>
-              <td>{{error.submitterLastName}}</td>
-              <td>{{error.description}}</td>
-              <td>{{error.solution}}</td>
+<div class="container">
+  <div id="myRow" class="row">
+    <div id="myBlock" class="col-8">
+      <h1> Search for Issues</h1>
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <div class="row">
+            <div id="searchInput" class="col-12">
+              <input placeholder="Search Errors" type="text" class="form-control" id="name" required [(ngModel)]="name"
+              name="name">
+              <button type="submit" style="float:right" class="my-button btn btn-success">Search</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h2>Errors</h2>
+        </div>
+        <div class="panel-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>ErrorID</th>
+                <th>UserName</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Description</th>
+                <th>Solution</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let error of errors">
+                <td>{{error.errorID}}</td>
+                <td>{{error.userName}}</td>
+                <td>{{error.submitterFirstName}}</td>
+                <td>{{error.submitterLastName}}</td>
+                <td>{{error.description}}</td>
+                <td>{{error.solution}}</td>
 
-            </tr>
-          </tbody>
-        </table>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
-  
+  </div>
+</div>

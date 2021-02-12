@@ -1,0 +1,27 @@
+#myRow {
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+}
+
+#myBlock {
+    background-color: rgb(255,255,255,0.9);
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.my-button {
+    background-color: #2e754c;
+    border-color: #2e754c;
+    padding: 6px 20px;
+    margin-left: 15px;
+}
+
+#searchInput {
+    display:inline-flex;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+    margin-top: 20px;
+}

@@ -7,18 +7,22 @@ import { SearchFormComponent } from './components/search-form/search-form.compon
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorFormComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    MenuBarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
